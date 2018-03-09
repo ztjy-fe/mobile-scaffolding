@@ -65,15 +65,15 @@ service.interceptors.response.use(
 )
 {{/if_eq}}
 const API = {
-  get(url, params, callback) {
+  get (url, params, callback) {
     return new Promise((resolve, reject) => {
       instance.get(url, params).then((response) => {
-        if (response.data.returncode === 10000) {
-          callback && callback(response.data.data)
-          resolve(response.data.data)
+        if (response.returncode === 10000) {
+          callback && callback(response.data)
+          resolve(response.data)
         } else {
-          console.log('服务器错误:' + response.data.message)
-          reject(response.data.message)
+          console.log('服务器错误:' + response.message)
+          reject(response.message)
         }
       }).catch((error) => {
         console.log('服务器错误!' + error)
@@ -81,15 +81,15 @@ const API = {
       })
     })
   },
-  post(url, params, callback) {
+  post (url, params, callback) {
     return new Promise((resolve, reject) => {
       instance.post(url, params).then((response) => {
-        if (response.data.returncode === 10000) {
-          callback && callback(response.data.data)
-          resolve(response.data.data)
+        if (response.returncode === 10000) {
+          callback && callback(response.data)
+          resolve(response.data)
         } else {
-          console.log('服务器错误:' + response.data.message)
-          reject(response.data.message)
+          console.log('服务器错误:' + response.message)
+          reject(response.message)
         }
       }).catch((error) => {
         console.log('服务器错误!' + error)
