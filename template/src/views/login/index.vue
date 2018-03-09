@@ -30,7 +30,7 @@ import { mapActions } from 'vuex'
 
 export default {
   name: 'login',
-  data() {
+  data () {
     return {
       loginForm: {
         username: 'admin',
@@ -48,14 +48,14 @@ export default {
     ...mapActions({
       login: 'User/login'
     }),
-    showPwd() {
+    showPwd () {
       if (this.pwdType === 'password') {
         this.pwdType = ''
       } else {
         this.pwdType = 'password'
       }
     },
-    handleLogin() {
+    handleLogin () {
       this.$refs.loginForm.validate(valid => {
         if (valid) {
           this.loading = true

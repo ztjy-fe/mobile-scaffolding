@@ -32,7 +32,7 @@ export default {
     ...mapActions({
       logout: 'User/logout'
     }),
-    logoutHandler() {
+    logoutHandler () {
       this.logout().then(() => {
         window.location.reload() // 为了重新实例化vue-router对象 避免bug
       })
@@ -82,4 +82,3 @@ export default {
   }
 }
 </style>
-

@@ -10,7 +10,7 @@ const User = {
   },
 
   getters: {
-    getUsername(state) {
+    getUsername (state) {
       return state.token
     }
   },
@@ -23,7 +23,7 @@ const User = {
 
   actions: {
     // 登录
-    login({ commit }, userInfo) {
+    login ({ commit }, userInfo) {
       const username = userInfo.username.trim()
       return new Promise((resolve, reject) => {
         UserMock.loginMock()
@@ -40,7 +40,7 @@ const User = {
     },
 
     // 获取用户信息
-    getUserInfo({ commit, state }) {
+    getUserInfo ({ commit, state }) {
       return new Promise((resolve, reject) => {
         UserMock.getUserInfoMock()
         UserApi.getUserInfo({}, response => {
@@ -50,7 +50,7 @@ const User = {
     },
 
     // 登出
-    logout({ commit, state }) {
+    logout ({ commit, state }) {
       return new Promise((resolve, reject) => {
         UserMock.logoutMock()
         UserApi.logout({}, response => {
@@ -62,7 +62,7 @@ const User = {
     },
 
     // 前端 登出
-    fedLogOut({ commit }) {
+    fedLogOut ({ commit }) {
       return new Promise(resolve => {
         commit('SET_TOKEN', '')
         authUtils.removeToken()

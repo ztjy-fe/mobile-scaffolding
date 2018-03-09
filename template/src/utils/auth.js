@@ -6,15 +6,15 @@ const removeCookie = require('szyutils/modules/removeCookie')
 const TokenKey = 'Admin-Token'
 
 export default {
-  getToken() {
+  getToken () {
     return getCookie(TokenKey)
   },
 
-  setToken(token) {
+  setToken (token) {
     return setCookie(TokenKey, token, 10)
   },
 
-  removeToken() {
+  removeToken () {
     return removeCookie(TokenKey)
   }
 }

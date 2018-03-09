@@ -13,7 +13,7 @@ import ScrollBar from '@/components/scrollbar'
 export default {
   components: { SidebarItem, ScrollBar },
   computed: {
-    routes() {
+    routes () {
       return this.$router.options.routes
     }
   }

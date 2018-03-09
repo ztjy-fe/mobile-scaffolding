@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       form: {
         name: ''
@@ -23,4 +23,3 @@ export default {
 <style scoped>
 
 </style>
-
