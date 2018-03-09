@@ -42,12 +42,12 @@ module.exports = {
       ]
     },
     "WXShare":{
-        "when": "proType === 'mobile'"
+        "when": "proType === 'mobile'",
         "type": "confirm",
         "message": "Import Weixin JS-SDK for your project?"
     },
     "Moblink":{
-        "when": "proType === 'mobile'"
+        "when": "proType === 'mobile'",
         "type": "confirm",
         "message": "Import Moblink.js for your project?"
     }
