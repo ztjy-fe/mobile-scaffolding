@@ -1,9 +1,8 @@
 import axios from 'axios'
 
 const instance = axios.create({
-  timeout: 15000 // 请求超时时间
+  timeout: 15000
 })
-
 {{#if_eq proType "admin"}}
 // request拦截器
 service.interceptors.request.use(config => {
@@ -14,7 +13,7 @@ service.interceptors.request.use(config => {
   return config
 }, error => {
   // Do something with request error
-  console.log(error) // for debug
+  console.log(error)
   Promise.reject(error)
 })
 
@@ -51,7 +50,7 @@ service.interceptors.response.use(
     }
   },
   error => {
-    console.log('err' + error)// for debug
+    console.log('err' + error)
     Message({
       message: error.message,
       type: 'error',
@@ -61,7 +60,6 @@ service.interceptors.response.use(
   }
 )
 {{/if_eq}}
-
 const API = {
   get(url, params, callback) {
     return new Promise((resolve, reject) => {
