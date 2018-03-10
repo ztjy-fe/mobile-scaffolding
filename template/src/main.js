@@ -5,6 +5,8 @@ import store from './store'
 import VueRouter from 'vue-router'
 import Vuex from 'vuex'
 import VueLazyload from 'vue-lazyload'
+// 自定义指令
+import '@/directives/statistic.js'
 {{#if_eq proType "admin"}}
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'

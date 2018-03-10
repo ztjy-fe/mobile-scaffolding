@@ -1,14 +1,14 @@
 
 export default {
-	data: function() {
+	data: function () {
 		return {
 			enterTime: 0
 		}
 	},
-	activated: function() {
+	mounted: function () {
 		this.enterTime = new Date().getTime()
 	},
-	deactivated: function() {
+	destroyed: function () {
 		const staytime = new Date().getTime() - this.enterTime
 		console.log('停留时间：' + staytime)
 	}
