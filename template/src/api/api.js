@@ -49,7 +49,7 @@ instance.interceptors.response.use(
 			}
 			return Promise.reject(new Error('error'))
 		} else {
-			return response.data
+			return response
 		}
 	},
 	error => {

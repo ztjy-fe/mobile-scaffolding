@@ -15,7 +15,6 @@ import '@/assets/scss/index.scss'
 import '@/permission'
 Vue.use(ElementUI, { locale })
 {{/if_eq}}
-
 {{#if_eq proType "mobile"}}
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
