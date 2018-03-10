@@ -50,6 +50,10 @@ module.exports = {
         "when": "proType === 'mobile'",
         "type": "confirm",
         "message": "Import Moblink.js for your project?"
+    },
+    "fundebug":{
+        "type": "confirm",
+        "message": "Install fundebug to monitor javascript?"
     }
   },
   "filters": {
