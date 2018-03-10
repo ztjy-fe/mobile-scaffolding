@@ -1,12 +1,15 @@
 <template>
 	<div class="hello">
-		<h1>\{{ msg }}</h1>
+		<h1 v-statistic obj-id="172.16.208.105">\{{ msg }}</h1>
 	</div>
 </template>
 
 <script>
+import stay from '@/mixins/stay'
+
 export default {
 	name: 'HelloWorld',
+	mixins: [stay],
 	data () {
 		return {
 			msg: 'Welcome to Your Vue.js App'

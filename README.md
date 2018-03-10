@@ -118,11 +118,11 @@ Handlebars.registerHelper('unless_eq', function (a, b, opts) {
 最后,提交到github自己的分支上，就可以使用了
 
 ```
-vue init ztjy-fe/szywebpack-template project-name
+vue init ztjy-fe/scaffolding project-name
 
 ```
 #### github地址
-[https://github.com/ztjy-fe/szywebpack-template](https://github.com/ztjy-fe/szywebpack-template)
+[https://github.com/ztjy-fe/scaffolding](https://github.com/ztjy-fe/scaffolding)
 
 #### 参考：  
 [vue-cli webpack的配置详解](http://blog.csdn.net/hongchh/article/details/55113751 )  
