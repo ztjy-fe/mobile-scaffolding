@@ -1,10 +1,13 @@
 # scaffolding
 
-> A Vue.js project
+> A minimal vue mobile & admin template with Element UI & axios & permission control & eslint & mockjs
 
 ## Build Setup
 
 ``` bash
+# vue-cli init
+vue init ztjy-fe/scaffolding project-name
+
 # install dependencies
 npm install
 
