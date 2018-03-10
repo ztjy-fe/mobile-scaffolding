@@ -1,24 +1,24 @@
 <template>
-  <div class="dashboard-container">
-    <div class="dashboard-text">name: admin</div>
-  </div>
+	<div class="dashboard-container">
+		<div class="dashboard-text">name: admin</div>
+	</div>
 </template>
 
 <script>
 
 export default {
-  name: 'dashboard'
+	name: 'dashboard'
 }
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
 .dashboard {
-  &-container {
-    margin: 30px;
-  }
-  &-text {
-    font-size: 30px;
-    line-height: 46px;
-  }
+	&-container {
+		margin: 30px;
+	}
+	&-text {
+		font-size: 30px;
+		line-height: 46px;
+	}
 }
 </style>

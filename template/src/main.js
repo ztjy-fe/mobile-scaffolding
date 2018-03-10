@@ -9,8 +9,10 @@ import VueLazyload from 'vue-lazyload'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import locale from 'element-ui/lib/locale/lang/en'
-import '@/assets/scss/index.scss' // global css
-import '@/permission' // permission control
+// 全局样式
+import '@/assets/scss/index.scss'
+// 路由鉴权
+import '@/permission'
 Vue.use(ElementUI, { locale })
 {{/if_eq}}
 
@@ -30,18 +32,18 @@ Vue.use(Vuex)
 const loadingImg = require('./assets/images/lazyload/default.jpg')
 const errorImg = require('./assets/images/lazyload/error.png')
 Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: errorImg,
-  loading: loadingImg,
-  try: 3
+	preLoad: 1.3,
+	error: errorImg,
+	loading: loadingImg,
+	try: 3
 })
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  store,
-  render: h => h(App)
+	el: '#app',
+	router,
+	store,
+	render: h => h(App)
 })

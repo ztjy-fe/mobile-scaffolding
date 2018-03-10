@@ -34,26 +34,26 @@
 看下 ``prompts``的代码
 ```
  "prompts": {
-    "name": {  //项目名
-      "type": "string",
-      "required": true,
-      "message": "Project name"  
-    },
-    "description": {  
-      "type": "string",
-      "required": false,
-      "message": "Project description",
-      "default": "A Vue.js project"
-    },
-    "author": {
-      "type": "string",
-      "message": "Author"
-    },
-    "mockJS":{
-        "type": "confirm",
-        "message": "Install mockjs?"
-    }
-    ...   
+		"name": {  //项目名
+			"type": "string",
+			"required": true,
+			"message": "Project name"  
+		},
+		"description": {  
+			"type": "string",
+			"required": false,
+			"message": "Project description",
+			"default": "A Vue.js project"
+		},
+		"author": {
+			"type": "string",
+			"message": "Author"
+		},
+		"mockJS":{
+				"type": "confirm",
+				"message": "Install mockjs?"
+		}
+		...   
  }
 
 ```
@@ -61,9 +61,9 @@
 
 ```
  "mockJS":{
-      "type": "confirm",
-      "message": "Install mockjs?"
-    },
+			"type": "confirm",
+			"message": "Install mockjs?"
+		},
 ```
 
 安装过程中，就会询问是否安装``mockjs``了
@@ -80,37 +80,37 @@
 
 // register handlebars helper
 Handlebars.registerHelper('if_eq', function (a, b, opts) {
-  return a === b
-    ? opts.fn(this)
-    : opts.inverse(this)
+	return a === b
+		? opts.fn(this)
+		: opts.inverse(this)
 })
 
 Handlebars.registerHelper('unless_eq', function (a, b, opts) {
-  return a === b
-    ? opts.inverse(this)
-    : opts.fn(this)
+	return a === b
+		? opts.inverse(this)
+		: opts.fn(this)
 })
 ```
 类似的，你也可以自定义一些函数，方便你自己去处理一些数据，在``meta.js``中``helpers``对象中可以加入自己的方法，如源码中就有注册一个``if_or``的方法,你在文件中就可以用``{{#if_or a b}}{{/if_or}}``去使用
 
 ```
 "helpers": {
-    "if_or": function (v1, v2, options) {
-      if (v1 || v2) {
-        return options.fn(this);
-      }
+		"if_or": function (v1, v2, options) {
+			if (v1 || v2) {
+				return options.fn(this);
+			}
 
-      return options.inverse(this);
-    }
-  },
+			return options.inverse(this);
+		}
+	},
 ```
 
 #### filters
 ``filters`` 是根据条件过滤文件，源码:
 ```
  "filters": {
-    "src/mock/**/*": "mockJS"  //例如上面的 mockJS 为true的时候，就会加入这个目录
-  },
+		"src/mock/**/*": "mockJS"  //例如上面的 mockJS 为true的时候，就会加入这个目录
+	},
 
 ```
 后续的话只需要将自己需要的文件跟文件夹，加入到``template/src``

@@ -7,30 +7,30 @@ import authUtils from '@/utils/auth' // 验权
 
 const whiteList = ['/login'] // 不重定向白名单
 router.beforeEach((to, from, next) => {
-  NProgress.start()
-  if (authUtils.getToken()) {
-    if (to.path === '/login') {
-      next({ path: '/' })
-    } else {
-      store.dispatch('User/getUserInfo').then(res => { // 拉取用户信息
-        next()
-      }).catch(() => {
-        store.dispatch('User/fedLogOut').then(() => {
-          Message.error('验证失败,请重新登录')
-          next({ path: '/login' })
-        })
-      })
-    }
-  } else {
-    if (whiteList.indexOf(to.path) !== -1) {
-      next()
-    } else {
-      next('/login')
-      NProgress.done()
-    }
-  }
+	NProgress.start()
+	if (authUtils.getToken()) {
+		if (to.path === '/login') {
+			next({ path: '/' })
+		} else {
+			store.dispatch('User/getUserInfo').then(res => { // 拉取用户信息
+				next()
+			}).catch(() => {
+				store.dispatch('User/fedLogOut').then(() => {
+					Message.error('验证失败,请重新登录')
+					next({ path: '/login' })
+				})
+			})
+		}
+	} else {
+		if (whiteList.indexOf(to.path) !== -1) {
+			next()
+		} else {
+			next('/login')
+			NProgress.done()
+		}
+	}
 })
 
 router.afterEach(() => {
-  NProgress.done() // 结束Progress
+	NProgress.done() // 结束Progress
 })
