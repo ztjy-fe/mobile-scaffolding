@@ -63,6 +63,7 @@ export default {
     display: inline-block;
     position: absolute;
     right: 35px;
+    top: 0;
     .avatar-wrapper {
       cursor: pointer;
       margin-top: 5px;

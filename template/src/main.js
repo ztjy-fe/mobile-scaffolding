@@ -18,6 +18,7 @@ Vue.use(ElementUI, { locale })
 import FastClick from 'fastclick'
 FastClick.attach(document.body)
 {{/if_eq}}
+
 {{#fundebug}}
 const fundebug = require('fundebug-javascript')
 // apikey 可根据实际情况填写

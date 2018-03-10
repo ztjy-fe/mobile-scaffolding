@@ -12,7 +12,7 @@ import { UserMock } from '@/mock/index'
 
 export default {
   name: 'App'{{#if_eq proType "mobile"}},
-  created() {
+  created () {
     // mock
     UserMock.getUserInfoMock()
     UserApi.getUserInfo({
