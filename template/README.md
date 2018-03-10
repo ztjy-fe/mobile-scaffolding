@@ -1,4 +1,4 @@
-# szywebpack-template
+# scaffolding
 
 > A Vue.js project
 
