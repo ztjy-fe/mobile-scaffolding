@@ -10,7 +10,7 @@ const User = {
 	},
 
 	getters: {
-		getUsername (state) {
+		getUserToken (state) {
 			return state.token
 		}
 	},
