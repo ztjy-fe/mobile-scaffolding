@@ -5,21 +5,9 @@
 </template>
 
 <script>
-{{#if_eq proType "mobile"}}
-import { UserApi } from '@/api/index'
-import { UserMock } from '@/mock/index'
-{{/if_eq}}
 
 export default {
-	name: 'App'{{#if_eq proType "mobile"}},
-	created () {
-		// mock
-		UserMock.getUserInfoMock()
-		UserApi.getUserInfo({
-			params: {}}, (res) => {
-			console.log(res)
-		})
-	}{{/if_eq}}
+	name: 'App',
 }
 </script>
 

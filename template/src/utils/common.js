@@ -1,23 +1,26 @@
+{{#if_eq proType "admin"}}
+import { USER_TOKEN } from '@/maps/constants'
+
 // 引入szyutils公用工具库
 const getCookie = require('szyutils/modules/getCookie')
 const setCookie = require('szyutils/modules/setCookie')
 const removeCookie = require('szyutils/modules/removeCookie')
 
-const TokenKey = 'Admin-Token'
-
 export default {
-	// 获取token
 	getToken () {
-		return getCookie(TokenKey)
+		return getCookie(USER_TOKEN)
 	},
 
-	// 设置token
 	setToken (token) {
-		return setCookie(TokenKey, token, 10)
+		return setCookie(USER_TOKEN, token, 10)
 	},
 
-	// 删除token
 	removeToken () {
-		return removeCookie(TokenKey)
+		return removeCookie(USER_TOKEN)
 	}
 }
+{{/if_eq}}
+{{#if_eq proType "mobile"}}
+export default {}
+{{/if_eq}}
+

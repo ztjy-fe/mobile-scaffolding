@@ -61,14 +61,17 @@ module.exports = {
 		}
 	},
 	"filters": {
-		"src/permission.js": "proType === 'admin'",
+		"src/utils/permission.js": "proType === 'admin'",
 		"src/views/dashboard/*": "proType === 'admin'",
 		"src/views/form/*": "proType === 'admin'",
 		"src/views/layout/**/*": "proType === 'admin'",
 		"src/views/login/*": "proType === 'admin'",
 		"src/router/login.js": "proType === 'admin'",
-		"src/components/**/*": "proType === 'admin'",
+		"src/components/breadcrumb/*": "proType === 'admin'",
+		"src/components/scrollbar/*": "proType === 'admin'",
 		"src/assets/scss/*": "proType === 'admin'",
+		"src/mock/user/*": "proType === 'admin'",
+		"src/store/modules/*": "proType === 'admin'",
 		"src/views/Index.vue": "proType === 'mobile'",
 		"src/router/hello.js": "proType === 'mobile'",
 		"src/assets/images/lazyload/*": "VueLazyload"
