@@ -68,6 +68,7 @@ module.exports = {
 		"src/views/login/*": "proType === 'admin'",
 		"src/router/login.js": "proType === 'admin'",
 		"src/components/**/*": "proType === 'admin'",
+		"src/assets/scss/*": "proType === 'admin'",
 		"src/views/Index.vue": "proType === 'mobile'",
 		"src/router/hello.js": "proType === 'mobile'",
 		"src/assets/images/lazyload/*": "VueLazyload"

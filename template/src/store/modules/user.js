@@ -1,12 +1,12 @@
 import { UserApi } from '@/api/index'
 import { UserMock } from '@/mock/index'
-import authUtils from '@/utils/auth'
+import Common from '@/utils/common'
 
 const User = {
 	namespaced: true,
 
 	state: {
-		token: authUtils.getToken()
+		token: Common.getToken()
 	},
 
 	getters: {
@@ -32,7 +32,7 @@ const User = {
 					password: userInfo.password
 				}, response => {
 					const userToken = response.token
-					authUtils.setToken(userToken)
+					Common.setToken(userToken)
 					commit('SET_TOKEN', userToken)
 					resolve()
 				})
@@ -55,7 +55,7 @@ const User = {
 				UserMock.logoutMock()
 				UserApi.logout({}, response => {
 					commit('SET_TOKEN', '')
-					authUtils.removeToken()
+					Common.removeToken()
 					resolve()
 				})
 			})
@@ -65,7 +65,7 @@ const User = {
 		fedLogOut ({ commit }) {
 			return new Promise(resolve => {
 				commit('SET_TOKEN', '')
-				authUtils.removeToken()
+				Common.removeToken()
 				resolve()
 			})
 		}

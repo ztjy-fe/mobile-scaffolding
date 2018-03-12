@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import stay from '@/mixins/stay'
+import pv from '@/mixins/pv'
 
 export default {
 	name: 'HelloWorld',
-	mixins: [stay],
+	mixins: [pv],
 	data () {
 		return {
 			msg: 'Welcome to Your Vue.js App'

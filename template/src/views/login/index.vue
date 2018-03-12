@@ -27,9 +27,11 @@
 
 <script>
 import { mapActions } from 'vuex'
+import pv from '@/mixins/pv'
 
 export default {
 	name: 'login',
+	mixins: [pv],
 	data () {
 		return {
 			loginForm: {

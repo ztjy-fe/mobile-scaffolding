@@ -2,7 +2,7 @@ import axios from 'axios'
 {{#if_eq proType "admin"}}
 import { Message, MessageBox } from 'element-ui'
 import store from '../store'
-import authUtils from '@/utils/auth'
+import Common from '@/utils/common'
 {{/if_eq}}
 const instance = axios.create({
 	timeout: 15000
@@ -12,7 +12,7 @@ const instance = axios.create({
 instance.interceptors.request.use(config => {
 	if (store.getters.token) {
 		// 让每个请求携带自定义token 请根据实际情况自行修改
-		config.headers['X-Token'] = authUtils.getToken()
+		config.headers['X-Token'] = Common.getToken()
 	}
 	return config
 }, error => {
