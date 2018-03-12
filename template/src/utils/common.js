@@ -23,4 +23,3 @@ export default {
 {{#if_eq proType "mobile"}}
 export default {}
 {{/if_eq}}
-

@@ -36,7 +36,6 @@ export const SYSTEM = {
 	}
 }
 {{/if_eq}}
-
 {{#if_eq proType "mobile"}}
 export const SYSTEM = {}
 {{/if_eq}}

@@ -1,6 +1,6 @@
 import axios from 'axios'
 {{#if_eq proType "admin"}}
-import { Message, MessageBox } from 'element-ui'
+import { Message } from 'element-ui'
 import store from '../store'
 import Common from '@/utils/common'
 {{/if_eq}}
@@ -23,7 +23,7 @@ instance.interceptors.request.use(config => {
 // respone拦截器
 instance.interceptors.response.use(
 	response => {
-		//returncode为非10000时抛错,可结合自己业务进行修改
+		// returncode为非10000时抛错,可结合自己业务进行修改
 		const res = response.data
 		if (res.returncode !== 10000) {
 			Message({
