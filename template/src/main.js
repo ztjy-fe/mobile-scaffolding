@@ -10,7 +10,6 @@ import VueLazyload from 'vue-lazyload'
 {{#if_eq proType "admin"}}
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import locale from 'element-ui/lib/locale/lang/en'
 // 全局样式
 import '@/assets/scss/index.scss'
 // 路由鉴权
@@ -24,7 +23,7 @@ Vue.use(VueRouter)
 Vue.use(Vuex)
 
 {{#if_eq proType "admin"}}
-Vue.use(ElementUI, { locale })
+Vue.use(ElementUI)
 {{/if_eq}}
 {{#if_eq proType "mobile"}}
 FastClick.attach(document.body)
