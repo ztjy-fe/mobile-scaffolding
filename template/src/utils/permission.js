@@ -1,5 +1,5 @@
-import router from './router'
-import store from './store'
+import router from '@/router/index'
+import store from '@/store/index'
 // Progress 进度条
 import NProgress from 'nprogress'
 // Progress 进度条样式

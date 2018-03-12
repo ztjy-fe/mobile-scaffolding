@@ -14,7 +14,7 @@ import locale from 'element-ui/lib/locale/lang/en'
 // 全局样式
 import '@/assets/scss/index.scss'
 // 路由鉴权
-import '@/permission'
+import '@/utils/permission'
 Vue.use(ElementUI, { locale })
 {{/if_eq}}
 {{#if_eq proType "mobile"}}
