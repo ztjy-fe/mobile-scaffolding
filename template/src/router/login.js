@@ -1,4 +1,3 @@
-
 const _import = require('./_import_' + process.env.NODE_ENV)
 
 const Layout = _import('layout/Layout')
@@ -7,8 +6,7 @@ export default [{
 	path: '/login',
 	component: _import('login/index'),
 	hidden: true
-},
-{
+}, {
 	path: '/',
 	component: Layout,
 	redirect: '/dashboard',
@@ -18,8 +16,7 @@ export default [{
 		path: 'dashboard',
 		component: _import('dashboard/index')
 	}]
-},
-{
+}, {
 	path: '/form',
 	component: Layout,
 	children: [{
@@ -27,8 +24,18 @@ export default [{
 		name: 'Form',
 		component: _import('form/index'),
 		meta: {
-			title: '一级菜单'
+			title: '菜单一'
 		}
 	}]
-}
-]
+}, {
+	path: '/table',
+	component: Layout,
+	children: [{
+		path: 'index',
+		name: 'Table',
+		component: _import('form/index'),
+		meta: {
+			title: '菜单二'
+		}
+	}]
+}]

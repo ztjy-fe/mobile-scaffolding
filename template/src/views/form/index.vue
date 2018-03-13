@@ -1,9 +1,7 @@
 <template>
 	<div class="app-container">
 		<el-form ref="form" :model="form" label-width="120px">
-			<el-form-item label="Activity name">
-				<el-input v-model="form.name"></el-input>
-			</el-form-item>
+			<el-form-item :label="path"></el-form-item>
 		</el-form>
 	</div>
 </template>
@@ -12,14 +10,13 @@
 export default {
 	data () {
 		return {
-			form: {
-				name: ''
-			}
+			form: {}
+		}
+	},
+	computed: {
+		path () {
+			return this.$route.meta.title
 		}
 	}
 }
 </script>
-
-<style scoped>
-
-</style>

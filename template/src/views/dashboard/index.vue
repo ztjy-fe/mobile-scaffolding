@@ -17,6 +17,7 @@ export default {
 		margin: 30px;
 	}
 	&-text {
+		text-align: left;
 		font-size: 30px;
 		line-height: 46px;
 	}
