@@ -5,8 +5,11 @@
 ## Build Setup
 
 ``` bash
-# vue-cli init
-vue init ztjy-fe/mobile-scaffolding project-name
+# szy-cli install
+npm install -g szy-cli
+
+# szy-cli create
+szy create project-name
 
 # install dependencies
 npm install
