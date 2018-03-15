@@ -13,33 +13,33 @@ module.exports = {
 		"name": {
 			"type": "string",
 			"required": true,
-			"message": "Project name"
+			"message": "项目名称"
 		},
 		"description": {
 			"type": "string",
 			"required": false,
-			"message": "Project description",
+			"message": "项目描述",
 			"default": "A Vue.js project"
 		},
 		"author": {
 			"type": "string",
-			"message": "Author"
+			"message": "作者"
 		},
 		"WXShare":{
 			"type": "confirm",
-			"message": "Import Weixin JS-SDK for your project?"
+			"message": "是否加载微信JS-SDK？"
 		},
 		"Moblink":{
 			"type": "confirm",
-			"message": "Import Moblink.js for your project?"
+			"message": "是否集成Deep Link解决方案Moblink.js？"
 		},
 		"VueLazyload":{
 			"type": "confirm",
-			"message": "Install VueLazyload?"
+			"message": "是否安装图片延迟加载插件VueLazyload？"
 		},
 		"fundebug":{
 			"type": "confirm",
-			"message": "Install fundebug to monitor javascript?"
+			"message": "是否安装JavaScript错误监控插件fundebug.js？"
 		}
 	},
 	"filters": {
