@@ -70,6 +70,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'index.html',
+			favicon: path.resolve('favicon.ico'),
 			// 将所有的静态文件都插入到body文件的末尾
 			inject: true
 		}),

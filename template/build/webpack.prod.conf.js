@@ -85,6 +85,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 			filename: config.build.index,
 			// 使用的模板的名称
 			template: 'index.html',
+			favicon: path.resolve('favicon.ico'),
 			// 把script和link标签放在body底部
 			inject: true,
 			minify: {
