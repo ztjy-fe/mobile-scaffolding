@@ -8,7 +8,7 @@ const API = {
 			instance.get(url, {
 				params: params
 			}).then((response) => {
-				if (response.data.returncode === 10000) {
+				if (response.data.returncode === '10000') {
 					callback && callback(response.data.body)
 					resolve(response.data.body)
 				} else {
@@ -24,7 +24,7 @@ const API = {
 	post (url, params, callback) {
 		return new Promise((resolve, reject) => {
 			instance.post(url, params).then((response) => {
-				if (response.data.returncode === 10000) {
+				if (response.data.returncode === '10000') {
 					callback && callback(response.data.body)
 					resolve(response.data.body)
 				} else {
