@@ -14,7 +14,7 @@ module.exports = {
 	extends: [
 		// https://github.com/vuejs/eslint-plugin-vue#priority-a-essential-error-prevention
 		// consider switching to `plugin:vue/strongly-recommended` or `plugin:vue/recommended` for stricter rules.
-		'plugin:vue/essential', 
+		'plugin:vue/essential',
 		// 详细说明：https://github.com/standard/standard/blob/master/docs/RULES-zhcn.md
 		'standard'
 	],
@@ -33,8 +33,9 @@ module.exports = {
 		// 许在开发环境下使用debugger
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		// tab 缩进
-		"indent": ["error", "tab"],
+		'indent': ["error", "tab"],
 		// 禁用 tab，如果你已经建立了好的使用 tab 的标准，可以不启用此规则。
-		"no-tabs":"off"
+		'no-tabs':"off",
+		'prefer-promise-reject-errors': 'off'
 	}
 }
