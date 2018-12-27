@@ -31,13 +31,13 @@ const webpackConfig = merge(baseWebpackConfig, {
 	output: {
 		// build所产生的文件的存放的文件夹地址
 		path: config.build.assetsRoot,
-	    // build之后的文件的名称
-	    // 这里[name]和[chunkhash]都是占位符
-	    // 其中[name]指的就是模块的名称
-	    // [chunkhash]chunk内容的hash字符串，长度为20
-		filename: utils.assetsPath('js/[name].[chunkhash].js'),
+		// build之后的文件的名称
+		// 这里[name]和[chunkhash]都是占位符
+		// 其中[name]指的就是模块的名称
+		// [chunkhash]chunk内容的hash字符串，长度为20
+		filename: utils.assetsPath('js/[name].[chunkhash:7].' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js'),
 		// [id]也是一个占位符，表示的是模块标识符(module identifier)
-		chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+		chunkFilename: utils.assetsPath('js/[id].[chunkhash:7].' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.js')
 	},
 	plugins: [
 		new webpack.DefinePlugin({
@@ -69,7 +69,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 			// 其中[name]和[contenthash]都是占位符
 			// [name]就是指模块的名称
 			// [contenthash]根据提取文件的内容生成的 hash
-			filename: utils.assetsPath('css/[name].[contenthash].css'),
+			filename: utils.assetsPath('css/[name].[contenthash:7].' + utils.getFixedDate((+new Date()), 'yyyyMMddHHmmss') + '.css'),
 			// 从所有额外的 chunk(additional chunk) 提取css内容
 			// （默认情况下，它仅从初始chunk(initial chunk) 中提取）
 			// 当使用 CommonsChunkPlugin 并且在公共 chunk 中有提取的 chunk（来自ExtractTextPlugin.extract）时
