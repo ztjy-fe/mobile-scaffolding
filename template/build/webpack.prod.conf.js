@@ -151,7 +151,7 @@ const webpackConfig = merge(baseWebpackConfig, {
 				// 定义要拷贝的资源的源目录
 				from: path.resolve(__dirname, '../static'),
 				// 定义要拷贝的资源的目标目录
-				to: config.build.assetsSubDirectory,
+				to: config.build.staticSinglePath,
 				// 忽略拷贝指定的文件，可以使用模糊匹配
 				ignore: ['.*']
 			}
