@@ -67,7 +67,7 @@ module.exports = {
 		devtool: '#source-map',
 
 		// 是否开启生产环境的gzip压缩
-		productionGzip: true,
+		productionGzip: false,
 		// 开启gzip压缩的文件的后缀名称
 		productionGzipExtensions: ['js', 'css'],
 
